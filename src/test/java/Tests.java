@@ -1,3 +1,4 @@
+import algorithm.BinarySearchTree;
 import org.junit.Assert;
 import org.junit.Test;
 import puzzle.Anagram;
@@ -26,5 +27,14 @@ public class Tests {
         Assert.assertFalse(Anagram.isAnagram("wtf", "wtd"));
         Assert.assertFalse(Anagram.isAnagram("wtf", "wtdyooo"));
         Assert.assertFalse(Anagram.isAnagram("wtfooo", "wtd"));
+    }
+
+    @Test
+    public void  testBST() {
+        BinarySearchTree.Node n1 = new BinarySearchTree.Node(1, null, null);
+        BinarySearchTree.Node n3 = new BinarySearchTree.Node(3, null, null);
+        BinarySearchTree.Node n2 = new BinarySearchTree.Node(2, n1, n3);
+
+        Assert.assertTrue(BinarySearchTree.contains(n2, 3));
     }
 }

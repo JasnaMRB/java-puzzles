@@ -19,8 +19,8 @@ public class Anagram {
             if (wordMap.containsKey(testWord.charAt(startTest))) {
                 int count = wordMap.get(testWord.charAt(startTest)) + 1;
                 wordMap.put(testWord.charAt(startTest), count);
-            }
-            wordMap.put(testWord.charAt(startTest), 1);
+            } else
+                wordMap.put(testWord.charAt(startTest), 1);
         }
         for (int start = 0; start < word.length(); start++) {
             if (wordMap.containsKey(word.charAt(start))) {
@@ -30,7 +30,7 @@ public class Anagram {
         }
 
         for (Map.Entry<Character, Integer> entry : wordMap.entrySet()) {
-            if (entry.getValue() > 0)
+            if (entry.getValue() != 0)
                 return false;
         }
         return true;

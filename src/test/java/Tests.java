@@ -20,7 +20,7 @@ public class Tests {
     public void testAnagram() {
         Assert.assertTrue(Anagram.isAnagram(" Mother-in-law", "Woman Hitler"));
         Assert.assertTrue(Anagram.isAnagram("These churn air", "The Hurricanes"));
-        Assert.assertTrue(Anagram.isAnagram("Conversation", "Voices rant on"));
+        Assert.assertTrue(Anagram.isAnagram("Punishment", "Nine Thumps"));
         Assert.assertFalse(Anagram.isAnagram("dflkj", "ioj-09sdf"));
         Assert.assertFalse(Anagram.isAnagram("hello there", "dolly faces"));
         Assert.assertFalse(Anagram.isAnagram("wtf", "wtd"));
